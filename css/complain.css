@@ -1,0 +1,148 @@
+/* aside img */
+.aside_top_img {
+  border-bottom: 1px solid #e5e5e5;
+  width: 250px;
+  height: 190px;
+  background: url(../images/aside03.png) 0 0 no-repeat;
+  position: relative;
+}
+/* aside img */
+/* common에서 다른것 */
+.lnb_aside_list li:nth-of-type(3) {
+  background: #f5f5f5 url(../images/checking.gif) 210px center no-repeat;
+}
+.cont_container {
+  overflow: visible;
+  margin-bottom: 30px;
+}
+/* common에서 다른것 */
+
+.main {font-family: 'paybooc-Medium';}
+.cont_container h3 {
+  font-size: 30px; color: #454851; text-align: center;
+  width: 100%; height: 45px; margin-bottom: 30px; margin-top: 10px;
+  line-height: 45px;
+}
+
+/* 민원 form */
+.complain_form{
+  width:900px; height: 680px;
+  border-radius: 5px; background:#454851;     
+  padding: 30px 25px; margin: 0 auto;
+  box-sizing: border-box;  
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  position: relative; font-family: 'paybooc-Medium';
+}
+.character_img {
+  position: absolute;
+  left: -165px;
+  top: 405px;
+  width: 213px;
+  height: 327px;
+  background: url(../images/char.png) no-repeat;
+}
+.complain_form fieldset {
+  background-color: #fff; border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 700px; min-width: 500px; height: 618px;
+  float: right; padding: 20px; box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.complain_form label { 
+  width:120px;
+  text-align: left; line-height: 30px; color:#fff;
+  position: absolute; left: 37px;
+  display: block;
+  font-family: 'BMJUA'; font-size: 25px;
+}
+.complain_form input {
+  width:560px; height:40px; padding:0 10px; border-radius: 5px;
+  color: #454851; font-size: 14px;
+  font-family: 'paybooc-Medium';
+  border: 1px solid #ced4da; 
+  box-shadow: 2px 2px 0 rgba(136, 136, 136, 0.377);
+  box-sizing: border-box;
+}
+.complain_form input:active {
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+}
+.complain_form input:focus {
+  border: 2px solid #858585; 
+}
+.complain_form textarea {
+  width: 560px; height: 380px; resize: none;
+  box-sizing: border-box;  color: #454851;
+  border: 1px solid #ced4da; border-radius: 5px;
+  box-shadow: 2px 2px 0 rgba(136, 136, 136, 0.377); 
+  font-family: 'paybooc-Medium';
+  margin-bottom: 30px;
+}
+.complain_form textarea:active {
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+}
+.complain_form textarea:focus {
+  outline: 2px solid #858585; 
+}
+
+span.add_desc { 
+  font-size: 14px;
+  color:#999; 
+  height:30px; line-height: 30px; padding-top:2px; margin-left: 20px;
+}
+.complain_form li:nth-of-type(4) label {
+  top: 585px;
+}
+
+/* select */
+.all_input_wrap select {
+  width: 100px; height: 30px;
+  line-height: 30px; font-family: 'paybooc-Medium';
+  margin-right: 5px; padding: 0px 10px;
+  border: 1px solid #ced4da; border-radius: 5px;
+  background: url(../images/toggle_arrow.png) no-repeat 95% 50%; background-size: 15%; appearance: none; color: #454851;
+  box-shadow: 2px 2px 0 rgba(136, 136, 136, 0.377);
+}
+.all_input_wrap select:active {
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+}
+.all_input_wrap select:focus-visible {outline: 2px solid #858585; }
+/* select */
+
+
+/* 완료 버튼 */
+.btn_wrap{
+  width: 910px; height:51px; 
+  margin:50px auto 0;
+}
+button.submit_complain {
+  font-family: 'BMJUA';
+  width:235px; height:51px; 
+  margin: 0 auto;
+  background: #eeba4c; 
+  font-size:25px; line-height: 51px; text-align: center; color:#fff;
+  display: block; border-radius: 5px; border: none;
+  box-shadow: 1px 3px 0 rgb(136 136 136);
+  cursor: pointer;
+}
+button.submit_complain:active { 
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+  background-color: #b1862b;
+}
+
+/* background: #D45246;
+background-color: #a13329; */
+
+/* 완료 버튼 */
+ul.all_input_wrap>li{
+  width: 680px; margin: 0 auto 30px; height: 30px;
+}
+ul.all_input_wrap>li>* {float:left;}
+/* 민원신고 폼 - 끝 */
+
+/* input[tpye="flie"] {
+  color: #a13329;
+} */

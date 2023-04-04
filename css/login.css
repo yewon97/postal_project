@@ -1,0 +1,110 @@
+.main {font-family: 'paybooc-Medium';}
+
+/* 배너 이미지 */
+div.cont_title_wrap {
+  background: url(../images/title_banner.png) top center no-repeat;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.cont_title {
+  text-align: center;
+  width: 1200px;
+  height: 180px;
+  padding: 82px 0 35px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'BMJUA';
+  font-size: 40px;
+  text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+color: #FFFFFF;
+}
+
+
+/* 로그인 페이지 */
+section.login_page{width:1200px; height: 630px; margin: 40px auto 88px;}
+
+form.user_login_part{
+  width:595px; height:630px; border-radius: 5px; background:#fff; padding:30px 65px; box-sizing: border-box; margin: 0 auto; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+
+.login_page_legend {font-size: 30px; color:#454851; width:230px; height:45px; text-align: center; margin-bottom: 30px;}
+
+.login_desc, .creat_account p { font-size: 16px; color:#272343; text-align: center;}
+.user_login_part .login_desc{margin-bottom: 40px;}
+
+.fa-key, .fa-user {background: #D45246; color: white; border: none; border-radius: 5px 0 0 5px; height: 50px; width: 50px; font-size: 30px; text-align: center; padding-top: 10px; box-sizing: border-box;}
+
+.u_id_label,.pwd_label {display: none;}
+
+.u_id_wrap,
+.pwd_wrap {width:370px; height:50px; margin: 0 auto 30px;}
+.user_login_button{
+  width:370px; height: 40px; 
+  font-size: 18px; color:#fff; 
+  background: #D45246; 
+  border-radius: 5px; 
+  letter-spacing: 5px; text-indent: 5px; 
+  margin: 20px auto 10px; display: block; 
+  border: none; 
+  box-shadow: 1px 2px 0 rgb(136 136 136);
+  font-family: 'paybooc-Medium'; cursor: pointer;
+}
+.kakao_btn {
+  background: #eeba4c;
+}
+.user_login_button:active {
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+  background-color: #a13329;
+}
+.kakao_btn:active{
+  background-color: #b1862b; 
+}
+p.u_id_wrap input,
+p.pwd_wrap input {
+  box-sizing: border-box; 
+  width:320px; height:50px; 
+  padding:15px 15px; 
+  outline: 0px; box-shadow: none; 
+  border: 1px solid #ced4da; border-radius: 0 5px 5px 0;
+  float: right; 
+  font-size:18px; line-height: 1.5; color: #495057;background-color: #fff;
+  background-clip: padding-box;
+}
+
+div.creat_account {border-top: 1px solid #9c9fa9; margin-top:20px; padding-top:20px;}
+.creat_account_btn{
+  width:370px; height: 40px;
+  font-size: 18px; color: #454851;
+  background:#fff; border-radius: 5px; 
+  letter-spacing: 5px; text-indent: 5px; 
+  margin: 20px auto; 
+  display: block; 
+  border: 1px solid #ced4da;
+  text-align: center; line-height: 40px;
+  box-shadow: 1px 2px 0 rgb(136 136 136);
+  font-family: 'paybooc-Medium'; cursor: pointer;
+}
+.creat_account_btn:active{
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+  background: #494b4d79;
+}
+
+/* checkbox */
+div.login_option{width:360px; height: 23px; margin: 0 auto; font-size: 15px;}
+.login_option input[type=checkbox]{display: none;}
+/* 체크 안된상태 */
+.login_option input[type=checkbox]+label{
+  display: block; width:100px; line-height:23px; color:#272343; text-align: right; background: url(../images/checkbox.png) left center no-repeat; float: left;
+}
+/* 체크된상태 */
+.login_option input[type=checkbox]:checked+label{background: url(../images/checked.png) left center no-repeat;}
+/* 아이디 비번 찾기 */
+.find_account a {color:#5a5959; }
+.find_account a:hover {font-weight: 900;}
+.find_account a:nth-child(2)::before{content:" | "}
+.find_account {float:right; line-height: 23px;}
+
+
+/* 에러메세지 */
+.err_id{display: block; width: 360px; color: #e73a38; font-weight: bold; font-size: 13px; height:15px; line-height: 15px; margin: 0 auto; padding: 8px 0 0 50px;}
+.err_pwd{display: block; width: 360px; color: #e73a38; font-weight: bold; font-size: 13px; height:15px; line-height: 15px; margin: 0 auto; padding: 8px 0 0 50px;}

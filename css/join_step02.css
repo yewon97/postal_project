@@ -1,0 +1,166 @@
+.main {font-family: 'paybooc-Medium';}
+
+/* 배너 이미지 */
+div.cont_title_wrap {
+  background: url(../images/title_banner.png) top center no-repeat;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.cont_title {
+  width: 1200px; height: 180px;
+  margin: 0 auto; padding: 82px 0 35px;
+  box-sizing: border-box;
+  font-family: 'BMJUA'; text-align: center; font-size: 40px; color: #FFFFFF;
+  text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+.cont_title::after {
+  content: '2/4'; display: block;
+  font-size: 30px; line-height: 40px; 
+}
+
+/* 2단계 약관동의 */
+section.use_term{
+  width:1200px; height: 750px; margin: 40px auto 88px;
+}
+.use_term form {
+  width:900px; height:750px; border-radius: 5px; background:#fff;     
+  padding: 30px; margin: 0 auto;
+  box-sizing: border-box;  
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.use_term h3{
+  font-size: 28px; color: #454851; text-align: center;
+  width: 100%; height: 35px; margin-bottom: 20px;
+  font-family: 'BMJUA';
+}
+.agreement1 h3 {
+  color: #D45246; 
+}
+.terms_cont{
+  line-height: 1.2; color: #454851;
+  width:800px; height:140px; border:1px solid #ddd; 
+  overflow-y: scroll; margin: 0 auto 10px; 
+  font-size: 16px; padding:10px; box-sizing: border-box;
+}
+
+.use_term input[type=checkbox] {display: none;}
+.agree_wrap {float:right;}
+
+.agreement1, .agreement2 {height: 275px; margin-bottom: 20px;}
+.agree_wrap.terms1 input[type=checkbox]+label,
+.agree_wrap.terms2 input[type=checkbox]+label {
+  float: left;
+  margin-top: 20px;
+  width: 105px; padding-right: 16px;
+  line-height: 20px; text-align: right;
+  background: url(../images/checkbox.png) no-repeat;
+  display: block;
+  color: #454851;
+}
+.agree_wrap.terms1 input[type=checkbox]:checked+label,
+.agree_wrap.terms2 input[type=checkbox]:checked+label {
+  background: url(../images/checked.png) no-repeat;
+}
+
+.agreement1 p, 
+.agreement2 p {
+  float: left;
+  width: 615px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  line-height: 20px;
+  padding-left: 20px;
+  color: #999;
+}
+
+.agree_check_container {
+  width: 809px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 0px 9px;
+  box-sizing: border-box;
+}
+.agree_check_container p {
+  line-height: 30px; float: left;
+  color: #454851;
+}
+
+.agree_check_container input[type=checkbox]+label {
+  width: 116px;
+  height: 27px;
+  background: url(../images/checkbox.png) no-repeat; 
+  background-size: contain; 
+  display: block; text-align: right; line-height: 27px;
+  color: #454851;
+}
+.agree_check_container input[type=checkbox]:checked+label {
+  background: url(../images/checked.png) no-repeat; 
+  background-size: contain;
+}
+
+/* 완료 버튼 */
+.btn_wrap{
+  width: 490px; height:51px; 
+  margin: 0 auto;
+}
+.go_back_btn {
+  width:235px; height:51px; 
+  background: #eeba4c; 
+  font-size:25px; line-height: 51px; text-align: center; color:#fff;
+  display: block; border-radius: 5px; border: none;
+  box-shadow: 1px 3px 0 rgb(136 136 136);
+  float: left;
+  font-family: 'paybooc-Medium';
+  cursor: pointer;
+}
+button.user_join_btn {
+  width:235px; height:51px; 
+  background: #eeba4c; 
+  font-size:25px; line-height: 51px; text-align: center; color:#fff;
+  display: block; border-radius: 5px; border: none;
+  box-shadow: 1px 3px 0 rgb(136 136 136);
+  float: right;
+  cursor: pointer;
+}
+.go_back_btn:active,
+button.user_join_btn:active { 
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+  background-color: #b1862b;
+}
+/* 완료 버튼 */
+
+ol.circle_number {
+  counter-reset: ol-counter; list-style: none; padding: 0; margin: 0; font-size: 16px;
+}
+ol.circle_number>li {
+  font-size: 16px; padding-left: 18px; position: relative;
+}
+ol.circle_number>li:before {
+  content: counter(ol-counter); counter-increment: ol-counter;background-color: #fff; border: 0.5px solid #454851; border-radius: 50%; height: 12px; width: 12px; color: #454851; font-size: 10px; line-height: 15px; position: absolute; left: 0; top: 1px; text-align: center;
+}
+ol.decimal_number>li {
+  list-style: decimal; list-style-position: inside;
+}
+ul.dash>li {
+  list-style: "- ";list-style-position: inside;
+}
+
+a.a_blue{color:#0000ff;}
+
+
+.terms_cont::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(236, 236, 236);
+}
+.terms_cont::-webkit-scrollbar-thumb {
+  background-color: #eeba4c;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 4px;
+}
+
+/* ::-webkit-scrollbar : 스크롤바 전체
+::-webkit-scrollbar-thumb : 스크롤 막대
+::-webkit-scrollbar-track : 스크롤 막대 외부 */
+

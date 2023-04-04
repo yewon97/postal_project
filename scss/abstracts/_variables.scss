@@ -1,0 +1,103 @@
+// 기본색상 정의
+$white : #fff;
+$black : #000;
+
+$red : #e73a38;
+$red_hover : #d45246;
+$yellow : #eeba4c;
+$yellow_hover : #b1862b;
+$gray : #f2f2f2;
+$graye5: #e5e5e5;
+$gray66 : #666;
+$gray99 : #999;
+$gray88 : #858585;
+$gray45 : #454851;
+$grayf5 : #f5f5f5;
+$gray_border : #ced4da;
+
+// default font size
+$web-fontsize: 62.5%;
+$mo-fontsize: 2.777777777777778vw;
+
+// 이미지 경로
+$url : '../images/';
+
+// 기초 변수정의
+$mobile_padding : rem(20); // 모바일 좌우여백 합산값
+$web_width : rem(1280); //margin:0 auto를 위한 가로크기
+$select_arrow : 'bg_select.svg'; //select 화살표
+$select_arrow_disabled : 'bg_select_disabled.svg'; //select dislabed화살표
+$select_pad:rem(20); // select 우측여백
+$select_bg:rem(20); // select 아이콘 우측위치
+
+$form_height:rem(10); //input높이
+$form_padding:rem(10); //input 좌우여백
+$form_border:$black; //input 외곽선
+$form_radius:rem(10); //input 모서리 둥근
+$form_color:$black; //input value 색
+$form_fs:rem(10); //input value 폰트크기
+$placeholder:$black; // placeholder 색
+
+$disabled_border:$black; //disabled 선색
+$disabled_bg:$black; //disabled 배경색
+$disabled_color:$black; //disabled 텍스트색
+
+$readonly_border:$black; //readonly 선색
+$readonly_bg:$black; //readonly 배경색
+$readonly_color:$black; //readonly 텍스트색
+
+// 체크박스, 라디오버튼
+$label_pad:rem(10); //좌측여백
+$label_lh:rem(10); //줄간격
+$label_fs:rem(10); //폰트크기
+$label_c:$black; //색
+$bg_chk_off:'bg_select.svg'; //체크박스 체크전 이미지
+$bg_chk_on:'bg_select.svg';//체크박스 체크후 이미지
+$bg_ra_off:'bg_select.svg';//라디오버튼 체크전 이미지
+$bg_ra_on:'bg_select.svg';//라디오버튼 체크후 이미지
+
+
+// 반응형정의
+$mobile : 0;
+$tablet : 500px;
+$web : 800px;
+
+// 버튼크기
+// 클래스명, 좌우여백, 높이, 폰트크기
+$btnsize:
+'small' 10 20 10, 
+'regular' 10 20 10, 
+'large' 10 20 10 
+;
+
+// 버튼색상
+// 클래스명, 선색, 배경색, 텍스트색
+$btncolor:
+'white' $white $black $white,
+'black' $black $white $black
+;
+
+// 버튼아이콘
+// 클래스명, 방향, 가로, 세로, 여백, 이미지
+$btnicon:
+  1 a 10 10 5 'bg_select.svg',  
+  2 b 10 10 5 'bg_select.svg'  
+;
+
+// 뱃지크기
+// 클래스명, 좌우여백, 높이, 폰트크기
+$badgesize:
+small 10 20 10, 
+regular 10 20 10, 
+large 10 20 10 
+;
+
+// 뱃지색상
+// 클래스명, 선색, 배경색, 텍스트색
+$badgecolor:
+'white' $white $black $white,
+'black' $black $white $black
+;
+
+// 모서리둥근
+$radius:10,20;

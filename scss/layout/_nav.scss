@@ -1,0 +1,28 @@
+.nav {
+	&__inner {
+		left:calc(50% - 400px);
+		position:absolute;
+		max-width:1200px;
+		top:138px;
+
+		> ul {
+			width:100%;
+			margin:0 auto;
+			box-sizing:border-box;
+			overflow:hidden;
+
+			> li {
+				width:200px;
+				float:left;
+				text-align:center;
+				z-index:20;
+
+				a {
+					display:block;
+					margin-bottom:3px;
+					color: $gray45;
+				}
+			}
+		}
+	}
+}

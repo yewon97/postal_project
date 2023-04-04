@@ -1,0 +1,69 @@
+%form {
+    padding:0 $form_padding;
+    width: 100%; //모바일은 가로100%
+    height:$form_height;
+    border:1px solid $form_border;
+    box-sizing: border-box;
+    border-radius: $form_radius;
+    color:$form_color;
+    font-size:$form_fs;
+    &::placeholder{
+        color:$placeholder;
+    }
+    &:disabled {
+        border-color:$disabled_border;
+        background-color:$disabled_bg;
+        color:$disabled_color;
+    }
+    &:read-only {
+        border-color:$readonly_border;
+        background-color:$readonly_bg;
+        color:$readonly_color;
+    }
+}
+
+%label {
+    @include hide;
+    + label {
+        display: inline-block;
+        padding-left:$label_pad;
+        line-height:$label_lh;
+        font-size: $label_fs;
+        color:$label_c;
+    }
+}
+
+textarea,
+input:not([type="radio"], [type="checkbox"]){
+    @extend %form;
+}
+
+select {
+    @extend %form;
+    @include select($select_pad, $select_bg);
+}
+
+input{
+    &[type="checkbox"]{
+        @extend %label;
+        + label {
+            @include bg($bg_chk_off,left,center);
+        }
+        &:checked {
+            + label {
+                @include bg($bg_chk_on,left,center);
+            }
+        }
+    }
+    &[type="radio"]{
+        @extend %label;
+        + label {
+            @include bg($bg_ra_off,left,center);
+        }
+        &:checked {
+            + label {
+                @include bg($bg_ra_on,left,center);
+            }
+        }
+    }
+}

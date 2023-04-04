@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* reset css */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1;font-family:'paybooc-Medium'}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}
+table{border-collapse:collapse;border-spacing:0}
+input:focus{outline:none}
+a{color:inherit;text-decoration:none}
+
+/* hide */
+.blind{overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}
+
+/* font */
+@font-face {
+  font-family: 'BMJUA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'paybooc-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* header */
+.header{width:100%;min-width:1200px;z-index:10;position:relative; color: #454851; border-bottom: 5px solid #e73a38; padding-bottom: 3px;}
+.topmenu{position:absolute;top:0;width:100%;height:45px;font-size:14px;background-color:#f2f2f2;z-index:5}
+.topmenu_wrap{width:1200px;position:relative;margin:8px auto;overflow:hidden}
+.topmenu_wrap ul{float:right}
+.topmenu_wrap ul li{float:left;margin-left:15px;margin-bottom:5px;line-height:29px}
+.topmenu_wrap .cart > span {
+  position: absolute;
+  right: 4px;
+  font-size: 11px;
+  top: -6px;
+}
+.logo{width:201px;height:55px;margin:auto;z-index:10;position:absolute;left:calc(50% - 100.5px);top:50px}
+.logo a{width:201px;height:55px;background:url(../images/logo.png) no-repeat;text-indent:-9999px;display:block;}
+.gnb{position:relative;width:1200px;margin:0 auto;height:160px;font-size:24px; font-family: 'BMJUA';}
+.gnb_wrap{left:calc(50% - 400px);position:absolute;max-width:1200px;top:138px}
+.gnb_wrap > ul{width:100%;margin:0 auto;box-sizing:border-box;overflow:hidden}
+.gnb_wrap > ul > li{width:200px;float:left;text-align:center;z-index:20}
+.gnb_wrap > ul > li >a{display:block;margin-bottom:3px}
+.lnb{font-size:18px;background-color:rgba(228, 228, 228, 0.863);padding:10px 0;display:none; color:#5d6270; margin-top: 6px;}
+.lnb li{padding:7px 0}
+.lnb li a:hover{color: #d45246;}
+
+/* footer */
+.footer {height: 219px; background: #f2f2f2; position: relative; margin-top: 48px; min-width: 1200px;}
+
+/* footer-top */
+.footer_top {position: relative; margin: auto; z-index: 2; background-color: #e73a38;height: 56px; min-width: 1200px;}
+.law-site_wrap {width: 1200px; margin: 0 auto;  padding: 0 50px; height: 56px; box-sizing: border-box; position: relative;}
+
+/* footer-law */
+.footer_top .footer_law li {font-size: 14px; float: left; line-height: 56px; margin-right: 50px; color: #fff;}
+
+/* family-site */
+.family_site {background: #fff; width: 156px; height: 23px; border: none; position: absolute; right: 32px; top: 50%; transform: translateY(-50%);}
+.family_site h3 {cursor: pointer; line-height: 20px; height: 25px; font-size: 13px; color: #666666; font-weight: normal; padding: 0px 9px; background: url(../images/toggle_arrow_01.png) no-repeat 128px center;}
+.family_site ul { width: 156px; height: 200px; padding: 5px 9px; background: #454851d0; position: absolute; display: none; box-sizing: border-box; bottom: 23px;}
+.family_site ul a {color: #f2f2f2;}
+.family_site ul li { margin: 0; font-size: 11px; line-height: 19px;}
+
+/* footer-bottom */
+.footer_bottom {position: relative; margin: auto; color: #666666; font-size: 13px; width: 1200px; min-width: 1200px; overflow: hidden;}
+.footer_bottom h2 {width: 145px; height: 39px; background: url(../images/logo.png) no-repeat; background-size: cover; text-indent: -9999px; margin-top: 15px; float: left;}
+.footer_bottom_cont_wrap {float: left;margin-top: 28px; width: 839px; height: 100px; margin-left: 20px; overflow: hidden; line-height: 2;}
+.footer_bottom_cont1 {display: inline-block; display: flex;}
+.footer_bottom_cont1 p::before {
+  content: "|";
+  margin: 0 14px;
+  display: inline-block;
+}
+.footer_bottom_mark {float: right;margin-top: 30px; display: flex;    align-items: center; margin-top: 70px;}
+.footer_bottom_mark li:first-child {margin-right: 10px;}

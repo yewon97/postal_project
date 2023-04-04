@@ -1,0 +1,209 @@
+// IR
+@mixin hide {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    border: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+// 배경
+// 배경이미지, x축, y축, 배경색, 가로크기, 세로크기
+@mixin bg($file, $x:null, $y:null, $bg:null, $w:null, $h:null) {
+    background: url(#{$url}#{$file}) no-repeat $x $y $bg;
+    background-size: $w $h;
+}
+
+// 포지션
+// x속성, x값, y속성, y값
+@mixin position($x, $xvalue, $y, $yvalue) {
+    position: absolute;
+    #{$x}:$xvalue;
+    #{$y}:$yvalue;
+    @if $xvalue == 50% and $yvalue == 50% {
+        transform: translate(-50%, -50%);
+    }@else if $xvalue == 50% {
+        transform: translateX(-50%);
+    }@else if $yvalue == 50% {
+        transform: translateY(-50%);
+    }
+}
+
+// select
+// 우측여백, 아이콘 우측위치
+@mixin select($pad, $right) {
+    @include bg($select_arrow, right $right, center);
+    
+    padding-right:$pad;
+    appearance: none;
+    &:disabled {
+        @include bg($select_arrow_disabled, right $right);
+    }
+    &::-ms-expand{
+        display: none;
+    }
+}
+
+// 구분자 리스트
+// 선/배경 , 가로, 세로, 좌우여백, 배경 
+@mixin bar($method, $w, $h, $margin, $bg) {
+    display:flex;
+    > li {
+        display: flex;
+        align-items: center;
+        + li {
+            &::before {
+                content: '';
+                margin:0 rem($margin);
+                width:rem($w);
+                height:rem($h);
+
+                @if $method == 'l' or $method == 'line' {
+                    background-color: $bg;
+                }@else if $method == 'bg' or $method =='img' {
+                    @include bg($bg);
+                }
+            }
+        }
+    }
+}
+
+// 말줄임표
+@mixin ellipsis($line:1) {
+    @if $line == 1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }@else{
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
+}
+
+// 스크롤바 디자인
+// 방향, 크기, 색
+@mixin scroll($dir, $w, $bg) {
+    &::-webkit-scrollbar{
+        @if $dir == 'r' or $dir == 'right' {
+            width:rem($w);
+        }@else if $dir == 'b' or $dir == 'bottom'{
+            height:rem($w);
+        }
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: rem($w);
+        background-color: $bg;
+        border-radius: rem($w);
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+}
+
+// before, after
+@mixin content($dir) {
+    @if $dir == 'b' or $dir == 'before' {
+        &::before {
+            content: '';
+            @content;
+        }
+    }@else if $dir == 'a' or $dir == 'after' {
+        &::after {
+            content: '';
+            @content;
+        }
+    }
+}
+
+// 반응형
+@mixin mobile {
+    @media (min-width:#{$mobile}) and (max-width:#{$tablet - 1}){
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width:#{$tablet}) and (max-width:#{$web}){
+        @content;
+    }
+}
+@mixin ie {
+    @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none){
+        @content;
+    }
+}
+
+// 버튼크기
+@each $cls, $pad, $h, $fs in $btnsize {
+    .btn.#{$cls} {
+        padding:0 rem($pad);
+        height:rem($h);
+        font-size: rem($fs);
+        border:1px solid;
+        box-sizing: border-box;
+        // border-radius: rem(10);
+    }
+}
+
+// 버튼색상
+@each $cls, $border, $bg, $c in $btncolor {
+    .btn.#{$cls} {
+        border-color:$border;
+        background-color: $bg;
+        color:$c;
+    }
+}
+
+// 버튼 아이콘
+@each $cls, $dir, $w, $h, $ml, $bg in $btnicon {
+    .btn.ico#{$cls}{
+        @if $dir == 'a' {
+            @include content(a){
+                width: rem($w);
+                height: rem($h);
+                margin-left: rem($ml);
+                @include bg(#{$bg},0,0,null, cover);
+            }
+        }@else if $dir == 'b'{
+            @include content(b){
+                width: rem($w);
+                height: rem($h);
+                margin-right: rem($ml);
+                @include bg(#{$bg},0,0,null,cover);
+            }
+        }
+    }
+}
+
+// 뱃지
+@each $cls, $pad, $h, $fs in $badgesize {
+    .badge.#{$cls} {
+        padding:0 rem($pad);
+        height:rem($h);
+        font-size: rem($fs);
+        border:1px solid;
+        box-sizing: border-box;
+        border-radius: rem(8);
+    }
+}
+// 뱃지색상
+@each $cls, $border, $bg, $c in $badgecolor {
+    .badge.#{$cls} {
+        border-color:$border;
+        background-color: $bg;
+        color:$c;
+    }
+}
+
+// 모서리둥근
+@each $i in $radius {
+    .btn.ra#{$i},
+    .badge.ra#{$i} {
+        border-radius: rem($i);
+    }
+}

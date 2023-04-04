@@ -1,0 +1,116 @@
+/* aside img */
+.aside_top_img {
+  border-bottom: 1px solid #e5e5e5;
+  width: 250px;
+  height: 190px;
+  background: url(../images/aside03.png) 0 0 no-repeat;
+  position: relative;
+}
+/* aside img */
+/* common에서 다른것 */
+.lnb_aside_list li:nth-of-type(2) {
+  background: #f5f5f5 url(../images/checking.gif) 210px center no-repeat;
+}
+/* common에서 다른것 */
+
+.cont_info {
+  width: 910px;
+  height: 160px;
+}
+.cont_info ul {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 3px solid #D45246;
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  flex-wrap: wrap; justify-content: space-between;
+}
+.cont_info li:nth-of-type(2n-1) { width: 73%;}
+.cont_info li:nth-of-type(2n) {
+  width: 27%;
+  justify-content: space-between;
+}
+.cont_info li:nth-of-type(2n) span {
+  width: 120px;
+  text-align: center;
+}
+.cont_info li {display: flex; height: 50px;align-items: center; }
+
+.cont_info li h4 {
+  font-size: 18px;
+  color: #D45246; font-weight: bold;
+  margin-right: 20px;
+  letter-spacing :2.5px;
+  width: 107px;
+  text-indent: 7px;
+}
+.cont_info li:nth-of-type(1), .cont_info li:nth-of-type(2) {
+  border-bottom: 2px solid #ddd;
+} 
+.cont_info li span {color: #454851; font-size: 15px;}
+
+/* cont_text */
+.cont_text {
+  padding: 0 10px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+/* cont_text */
+
+/* cont_move */
+.cont_move {
+  width: 910px;
+  height: 130px;
+}
+.cont_move ul {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #999;
+  display: flex; flex-direction: column;
+  flex-wrap: wrap; justify-content: space-between;
+}
+.cont_move li h4 {
+  font-size: 18px;
+  color: #D45246; font-weight: bold;
+  margin-right: 20px;
+  letter-spacing :2.5px;
+  width: 107px;
+  text-indent: 7px;
+}
+.cont_move ul li {
+ display: flex;
+ height: 50px;align-items: center;
+}
+.cont_move ul li:first-child {
+  border-bottom: 2px solid #ddd;
+}
+.cont_move h5 {
+  width: 74%; color: #454851;
+}
+.cont_move li span {
+  width: 15%;
+  text-align: center;
+  color: #999;
+  font-size: 15px;
+}
+/* cont_move */
+
+/* 목록보기 아이콘 */
+.cont_return {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.cont_return p {
+  width:235px; height:51px; 
+  background: #eeba4c; 
+  font-size:25px; line-height: 51px; text-align: center; color:#fff;
+  display: block; border-radius: 5px; border: none;
+  box-shadow: 1px 3px 0 rgb(136 136 136);
+  float: left;
+  font-family: 'paybooc-Medium';
+  cursor: pointer;
+  margin: 30px auto;
+}
+/* 목록보기 아이콘 */

@@ -1,0 +1,31 @@
+html {
+    scroll-behavior: smooth;
+}
+.guide {
+    &-body {
+    }
+    &-tab {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        a {
+            display: block;
+            line-height: 30px;
+        }
+    }
+    &-title {
+        font-size: 40px;
+        padding:100px 0 30px;
+        border-top:3px solid rgba($black, .3);
+    }
+    &-top {
+        position: fixed;
+        right: 20px;
+        bottom:20px;
+        background-color: $black;
+        color:$white;
+        padding: 10px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>아이디 중복 검색</title>
+  <style type="text/css">
+    body,
+    button {
+      font-family: 'paybooc-Medium';
+    }
+
+    p.search_wrap {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      overflow: hidden;
+    }
+
+    legend {
+      font-size: 21px;
+      text-align: center;
+      color: #454851;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 200px;
+      height: 40px;
+      padding: 0 10px;
+      border-radius: 5px;
+      color: #D45246;
+      font-size: 14px;
+      font-family: 'paybooc-Medium';
+      border: 1px solid #ced4da;
+      box-shadow: 2px 2px 0 rgb(136 136 136 / 38%);
+    }
+    input:active{
+      box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+    }
+    input:focus {
+      outline: 2px solid #D45246;
+    }
+    form {
+      border-radius: 5px;
+      background: #fff;
+      padding: 30px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      width: 400px;
+      height: 300px;
+      margin-top: 15px;
+    }
+
+    .btn {
+      background: #D45246;
+      height: 40px;
+      width: 70px;
+      font-size: 19px;
+      text-align: center;
+      color: #fff;
+      line-height: 20px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 2px 2px 0 rgb(136 136 136);
+      cursor: pointer;
+    }
+
+    button:active {
+      box-shadow: 1px 1px 0 rgb(0, 0, 0, 0.5);
+      position: relative;
+      top: 2px;
+      background-color: #a13329;
+    }
+
+    span {
+      color: #D45246;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 20px;
+    }
+    .result {
+      height: 110px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .result .right {
+      line-height: 25px;
+      font-weight: bold;
+      color: #454851;
+    }
+    .use_btn {
+      background: #D45246;
+      height: 30px;
+      width: 100px;
+      font-size: 16px;
+      text-align: center;
+      color: #fff;
+      line-height: 20px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 2px 2px 0 rgb(136 136 136);
+      cursor: pointer;
+      margin-top: 20px;
+      box-sizing: border-box;
+    }
+    .wrong {
+      line-height: 25px;
+      font-weight: bold;
+      color: #D45246;
+    }
+  </style>
+
+<script type="text/javascript">
+  function check_id() {
+    var input_id = document.getElementById("input_id");
+
+    if (input_id.value == "") {
+      var err_txt = document.querySelector('.err_id');
+      err_txt.textContent = '아이디를 입력하세요.';
+      input_id.focus();
+      return false;
+    }
+    if (input_id.value) {
+      let regid = /^[a-z]+[a-z0-9]{5,19}$/g;
+      if (!regid.test(input_id.value)) {
+        var err_txt = document.querySelector('.err_id');
+        err_txt.textContent = '영어+숫자 조합, 6~20자만 가능합니다.';
+        input_id.focus();
+        return false;
+      }
+    }
+
+    // let iframe = document.querySelector("#iframe1");
+    // iframe.style.dispaly = "block";
+  };
+
+</script>
+</head>
+
+<body>
+  <form name="check_id_form" method="post" onsubmit="return check_id()" target="iframe1">
+    <fieldset>
+      <legend>중복 검색</legend>
+      <p class="search_wrap">
+        <label for="input_id" class="blind">아이디</label>
+        <input type="text" name="input_id" id="input_id" autofocus>
+        <button type="submit" class="btn"><i class="fas fa-search"></i></button><br>
+      </p>
+      <span class="err_id"></span>
+      <hr>
+      <div class="result">
+        <!-- <p class="right">이 아이디는 사용 가능합니다.</p>
+        <p class="right">사용하시겠습니까?</p>
+        <button type="button" class="use_btn" onclick="return_id()">사용하기</button> -->
+        <p class="wrong">사용 중인 아이디 입니다.</p>
+        <p class="wrong">다른 아이디를 입력해주세요</p>
+      </div>
+    </fieldset>
+  </form>
+  <iframe id="iframe1" name="iframe1" style="display:none"></iframe>
+
+
+</body>
+
+</html>

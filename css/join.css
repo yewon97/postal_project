@@ -1,0 +1,219 @@
+.main {font-family: 'paybooc-Medium';}
+
+/* 배너 이미지 */
+div.cont_title_wrap {
+  background: url(../images/title_banner.png) top center no-repeat;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.cont_title {
+  width: 1200px; height: 180px;
+  margin: 0 auto; padding: 82px 0 35px;
+  box-sizing: border-box;
+  font-family: 'BMJUA'; text-align: center; font-size: 40px; color: #FFFFFF;
+  text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+.cont_title::after {
+  content: '3/4'; display: block;
+  font-size: 30px; line-height: 40px; 
+}
+
+/* 회원 정보 입력 */
+.error_txt {
+  width: 100%;  margin-top: 8px;
+  color: red; font-weight: bold; text-indent: 120px; font-size: 12px;
+  display: block;
+}
+
+section.join_page{
+  width:1200px; height: 750px; margin: 40px auto 88px;
+}
+
+form.user_join_part{
+  width:900px; height:750px; border-radius: 5px; background:#fff;     
+  padding: 30px 65px; margin: 0 auto;
+  box-sizing: border-box;  
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.join_page_legend {
+  font-size: 30px; color:#454851; text-align: center; 
+  width:230px; height:45px; margin-bottom: 30px;
+}
+.user_join_part label { 
+  width:120px; height:30px; 
+  text-align: left; line-height: 30px; color:#454851; 
+  display: block;
+}
+.user_join_part input {
+  width:320px; height:30px; padding:0 10px; border-radius: 5px;
+  color:#D45246; font-size: 14px;
+  font-family: 'paybooc-Medium';
+  border: 1px solid #ced4da; 
+  box-shadow: 2px 2px 0 rgba(136, 136, 136, 0.377);
+}
+.user_join_part input:active {
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+}
+
+button.check_id,
+button.search_addr_btn {
+  width:100px; height:30px; 
+  margin-left: 20px; border: none; cursor: pointer; box-shadow: 1px 2px 0 rgb(136 136 136);
+  font-size: 16px; color:#fff; 
+  background: #454851; border-radius: 5px;
+  font-family: 'paybooc-Medium'; cursor: pointer;
+}
+button.check_id:active,
+button.search_addr_btn:active { 
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+  background-color: #6d758b;
+}
+
+span.add_desc { 
+  font-size: 14px;
+  color:#999; 
+  height:30px; line-height: 30px; padding-top:2px; margin-left: 20px;
+}
+
+/* 생일 */
+li.user_birth input[type=radio] {display: none;}
+.user_birth input[type=radio]+label {
+  width:65px; height:32px; padding-top:4px; 
+  color:#666; text-align: right; line-height: 30px; display: block; 
+  background: url(../images/radio-btn.png) left center no-repeat; margin-left: 20px;
+}
+.user_birth input[type=radio]:checked+label {
+  background: url(../images/radio-btn-checked.png) left center no-repeat;
+}
+#birth {width:160px;}
+/* 생일 */
+
+/* email */
+span.connect_word{ 
+  font-size: 20px; color:#D45246; display: block; width:20px; height:30px; text-align: center;
+line-height: 30px; padding-top:2px; margin: 0 10px;
+}
+.user_email input[type=text] {
+  width:180px; height:30px; padding-right: 0;
+}
+li.user_email {position:relative;}
+ul.email_dns_list {
+  width: 200px; height: 180px;
+  background: #eee;
+  font-size: 16px; color: #D45246;
+  border-radius: 5px;
+  padding: 0px 10px;
+  position: absolute; top: -180px; right: 52px;
+  display: none; box-sizing: border-box;
+  transform: rotate(180deg);
+  border: 1px solid #ced4da;
+}
+.email_dns_list a {
+  width:100%; height:100%; 
+  display: block; color: #8a8b8c;
+  transform: rotate(-180deg);
+}
+.email_dns_list a:hover {
+  color: #D45246;
+  font-weight: bold;
+}
+.email_sel {
+  line-height: 30px; margin-left: 7px; cursor: pointer; box-shadow: none;
+}
+.email_sel {
+  width:200px; height:30px; 
+  box-shadow: 2px 2px 0 rgba(136, 136, 136, 0.377); font-size: 16px;
+  border: 1px solid #ced4da; border-radius: 5px;
+}
+.down_icon{
+  width:30px; height:28px; 
+  background: url(../images/toggle_arrow_up.png) center no-repeat; 
+  display: block;
+  float: right;
+  padding-right: 8px; 
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.dns_option_select span:nth-of-type(1) {
+  padding: 8px;
+  color: #8a8b8c;
+}
+/* email */
+
+.user_phone {clear: both;}
+
+/* 주소 */
+.detail_addr {width: 100%; height: 30px; margin: 10px 0 30px;}
+#postalCode {width:160px;}
+.user_address label:not(.postal_code) {width: 120px;}
+.user_address label:nth-of-type(1) {float: left;}
+.user_address label:nth-of-type(2) {display: none;}
+.user_address input:not(.postal_code) {width: 240px;}
+.user_address input:nth-of-type(1) {margin-right: 10px;float: left;}
+.user_address input:nth-of-type(2) {width: 330px;float: left;}
+/* 주소 */
+
+/* 완료 버튼 */
+.btn_wrap{
+  width: 490px; height:51px; 
+  margin:50px auto 0;
+}
+.go_back_btn {
+  width:235px; height:51px; 
+  background: #eeba4c; 
+  font-size:25px; line-height: 51px; text-align: center; color:#fff;
+  display: block; border-radius: 5px; border: none;
+  box-shadow: 1px 3px 0 rgb(136 136 136);
+  float: left;
+  font-family: 'paybooc-Medium';
+  cursor: pointer;
+}
+button.user_join_btn {
+  font-family: 'paybooc-Medium';
+  width:235px; height:51px; 
+  background: #eeba4c; 
+  font-size:25px; line-height: 51px; text-align: center; color:#fff;
+  display: block; border-radius: 5px; border: none;
+  box-shadow: 1px 3px 0 rgb(136 136 136);
+  float: right;
+  cursor: pointer;
+}
+.go_back_btn:active,
+button.user_join_btn:active { 
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+  background-color: #b1862b;
+}
+
+/* background: #D45246;
+background-color: #a13329; */
+
+/* 완료 버튼 */
+ul.all_input_wrap>li{
+  width:804px; height:32px; margin: 0 auto 30px;
+}
+ul.all_input_wrap>li>* {float:left;}
+/* 회원 정보 입력 - 끝 */
+
+
+/* 회원가입 완료 */
+section.join_complete{width:1200px;height:150px; margin: 0 auto;
+  border-radius: 5px; border:5px solid #D45246; background: #fff;
+  padding:45px 0; margin-bottom:60px;}
+.join_complete p {width:345px; height:50px; text-align: right; background: url(../images/complete_check_icon.png) left center no-repeat; margin: 0 auto; font-family: 'HangeulNuri-Bold'; font-size:24px; color:#666666; padding-top:10px;}
+.join_complete span{color:#272343;}
+
+a.button_move {display:block; width:195px; height:50px; background: url(../images/sub_movehome_button.jpg) center no-repeat; font-size:24px; font-family: 'GmarketSansMedium'; text-align: center; float:left; line-height: 57px;}
+a.button_move:hover {background: url(../images/sub_movehome_button_act.jpg) center no-repeat;}
+a.button_move.gohome {margin-right:20px;}
+
+div.complete_button{margin:0 auto; width:410px; height:50px; margin-bottom:200px;}
+
+input:read-only {
+  background-color: #eee;
+}
+.err_address {
+  margin-top: 39px;
+}

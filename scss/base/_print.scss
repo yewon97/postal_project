@@ -1,0 +1,13 @@
+@media print{
+    .header,
+    .footer {
+        display: none;
+    }
+    body {
+        padding:10mm 0;
+    }
+}
+
+@page {
+    margin:0 10mm;
+}
